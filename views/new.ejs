@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: blanchedalmond;
+    text-align: center;
+    margin: 50px;
+}
+
+/* Form Container */
+form {
+    display: inline-block;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Fields */
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+/* Placeholder Styling */
+input::placeholder,
+textarea::placeholder {
+    color: #888;
+}
+
+/* Button */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Spacing */
+br {
+    display: none; /* Removes extra line breaks for cleaner spacing */
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+    </style>
+    
+    <title>Create New post</title>
+</head>
+<body>
+    <h1 style="color: maroon;">CREATE POST</h1>
+    <form method="post" action="/posts">
+        <input placeholder="enter username" name="username"><br><br>
+        <textarea placeholder="write your post" name="content" ></textarea><br><br>
+        <button>Submit Post</button>
+    </form>
+    
+   
+
+
+</body>
+</html>

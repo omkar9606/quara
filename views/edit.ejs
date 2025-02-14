@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: blanchedalmond;
+    text-align: center;
+    margin: 50px;
+}
+
+/* Header */
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Post Info */
+p {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Form Styling */
+form {
+    display: inline-block;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+/* Button */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+    <title>Edit Post</title>
+</head>
+<body>
+    <h1 style="color: maroon;">EDIT YOUR POST</h1>
+    <p>Post id: @<%=post.id %></p>
+    <p>Post username: <%=post.username %></p>
+    <form method="post" action="/posts/<%=post.id %>?_method=PATCH">
+        <textarea rows="10" cols="35" name="content"><%=post.content %></textarea>
+        <button>Submit</button>
+    </form>
+
+</body>
+</html>
